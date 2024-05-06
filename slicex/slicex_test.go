@@ -11,3 +11,10 @@ func TestSubtract(t *testing.T) {
 
 	fmt.Println(Subtract(s1, s2))
 }
+
+func TestIntersect(t *testing.T) {
+	s1 := []int{1, 2, 3}
+	s2 := []int{3, 4, 5}
+
+	fmt.Println(Intersect(s1, s2))
+}
