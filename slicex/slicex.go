@@ -35,3 +35,24 @@ func Intersect[T comparable](s1, s2 []T) []T {
 
 	return s
 }
+
+// Union 并集
+func Union[T comparable](s1, s2 []T) []T {
+	s := append(s1, s2...)
+	return Distinct(s)
+}
+
+// Distinct 去重
+func Distinct[T comparable](s []T) []T {
+	m := make(map[T]bool)
+
+	newS := make([]T, 0)
+	for _, it := range s {
+		if !m[it] {
+			m[it] = true
+			newS = append(newS, it)
+		}
+	}
+
+	return newS
+}
