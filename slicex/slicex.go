@@ -56,3 +56,13 @@ func Distinct[T comparable](s []T) []T {
 
 	return newS
 }
+
+// Reverse 反转
+func Reverse[T comparable](s []T) []T {
+	length := len(s)
+	for i := 0; i < length/2; i++ {
+		j := length - i - 1
+		s[i], s[j] = s[j], s[i]
+	}
+	return s
+}

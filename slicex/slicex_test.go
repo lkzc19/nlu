@@ -31,3 +31,12 @@ func TestDistinct(t *testing.T) {
 
 	fmt.Println(Distinct(s))
 }
+
+func TestReverse(t *testing.T) {
+	s := []int{1, 2, 3, 4, 5, 6}
+	fmt.Println(Reverse(s))
+	s = []int{1, 2, 3, 4, 5}
+	fmt.Println(Reverse(s))
+	s = []int{}
+	fmt.Println(Reverse(s))
+}
