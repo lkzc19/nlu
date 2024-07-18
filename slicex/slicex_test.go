@@ -32,6 +32,13 @@ func TestDistinct(t *testing.T) {
 	fmt.Println(Distinct(s))
 }
 
+func TestContains(t *testing.T) {
+	var s []string
+	fmt.Println(Contains(s, "foo"))
+	s = append(s, "foo")
+	fmt.Println(Contains(s, "foo"))
+}
+
 func TestReverse(t *testing.T) {
 	s := []int{1, 2, 3, 4, 5, 6}
 	fmt.Println(Reverse(s))
