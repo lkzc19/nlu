@@ -57,6 +57,16 @@ func Distinct[T comparable](s []T) []T {
 	return newS
 }
 
+// Contains 判断一个元素是否在slice中。
+func Contains[T comparable](s []T, e T) bool {
+	for _, it := range s {
+		if it == e {
+			return true
+		}
+	}
+	return false
+}
+
 // Reverse 反转
 func Reverse[T comparable](s []T) []T {
 	length := len(s)
